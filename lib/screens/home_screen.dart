@@ -1,4 +1,7 @@
+import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:air_ticket_flutter/utils/app_style.dart';
+import 'package:gap/gap.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -6,13 +9,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFeeedf2),
+      backgroundColor: Styles.bgColor,
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 20, right: 20),
+            padding: EdgeInsets.only(left: 10, right: 10),
             child: Column(
               children: [
+                const Gap(40),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -21,18 +25,12 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Text(
                           'Good Morning',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.black38,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: Styles.headLineStyle3,
                         ),
+                        const Gap(5),
                         Text(
                           'Book Tickets',
-                          style: TextStyle(
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
+                          style: Styles.headLineStyle1,
                         ),
                       ],
                     ),
@@ -48,7 +46,21 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+                const Gap(25),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF4F6FD),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Row(
+                    children: [
+                     const Icon(FluentSystemIcons.ic_fluent_search_regular),
+                      Text('Search',style: Styles.headLineStyle4,)
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
