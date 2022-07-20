@@ -1,3 +1,4 @@
+import 'package:air_ticket_flutter/screens/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:air_ticket_flutter/utils/app_style.dart';
@@ -56,8 +57,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                     const Icon(FluentSystemIcons.ic_fluent_search_regular),
-                      Text('Search',style: Styles.headLineStyle4,)
+                      const Icon(FluentSystemIcons.ic_fluent_search_regular),
+                      Text(
+                        'Search',
+                        style: Styles.headLineStyle4,
+                      )
                     ],
                   ),
                 ),
@@ -65,14 +69,26 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Upcoming Flight', style: Styles.headLineStyle2,),
-                    InkWell(onTap: (){}, child: Text('View all',style: Styles.textStyle.copyWith(color: Styles.primaryColor,),),),
+                    Text(
+                      'Upcoming Flight',
+                      style: Styles.headLineStyle2,
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: Text(
+                        'View all',
+                        style: Styles.textStyle.copyWith(
+                          color: Styles.primaryColor,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ],
             ),
           ),
-
+          const Gap(15),
+          TicketView(),
         ],
       ),
     );
