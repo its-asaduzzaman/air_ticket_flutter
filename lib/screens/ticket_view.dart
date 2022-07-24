@@ -117,6 +117,7 @@ class TicketView extends StatelessWidget {
                           'London',
                           style: Styles.headLineStyle4
                               .copyWith(color: Colors.white),
+                          textAlign: TextAlign.end,
                         ),
                       ),
                     ],
@@ -186,7 +187,76 @@ class TicketView extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 16,top: 10,right: 16, bottom: 16),
+              decoration: BoxDecoration(
+                color: Styles.orangeColor,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(21),
+                  bottomRight: Radius.circular(21),
+                ),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        '1 May',
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.white),
+                      ),
+                      const Spacer(),
+                      Text(
+                        '08:00 AM',
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.white),
+                      ),
+                      const Spacer(),
+                      Text(
+                        '23',
+                        style:
+                            Styles.headLineStyle3.copyWith(color: Colors.white),
+                      )
+                    ],
+                  ),
+                  const Gap(3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          'Date',
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white),
+                        ),
+                      ),
+                      const Spacer(),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Text(
+                          'Departure time',
+                          style:
+                              Styles.headLineStyle4.copyWith(color: Colors.white),
+
+                        ),
+                      ),
+                      const Spacer(),
+                      SizedBox(
+                        width: 100,
+                        child: Text(
+                          'Number',
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white),
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
