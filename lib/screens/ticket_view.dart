@@ -12,11 +12,11 @@ class TicketView extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = AppLayout.getSize(context);
     return SizedBox(
-      width: size.width,
+      width: size.width * 0.95,
       height: 200,
       child: Container(
         margin: const EdgeInsets.only(
-          left: 16,
+          right: 16,
         ),
         child: Column(
           children: [
@@ -189,7 +189,8 @@ class TicketView extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 16,top: 10,right: 16, bottom: 16),
+              padding:
+                  EdgeInsets.only(left: 16, top: 10, right: 16, bottom: 16),
               decoration: BoxDecoration(
                 color: Styles.orangeColor,
                 borderRadius: BorderRadius.only(
@@ -237,9 +238,8 @@ class TicketView extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30),
                         child: Text(
                           'Departure time',
-                          style:
-                              Styles.headLineStyle4.copyWith(color: Colors.white),
-
+                          style: Styles.headLineStyle4
+                              .copyWith(color: Colors.white),
                         ),
                       ),
                       const Spacer(),
