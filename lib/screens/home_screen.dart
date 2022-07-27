@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:air_ticket_flutter/utils/app_style.dart';
 import 'package:gap/gap.dart';
 
+import '../utils/app_layout.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -16,10 +18,11 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.only(left: 10, right: 10),
+            padding: EdgeInsets.only(
+                left: AppLayout.getHeight(10), right: AppLayout.getHeight(10)),
             child: Column(
               children: [
-                const Gap(40),
+                Gap(AppLayout.getHeight(40)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -30,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                           'Good Morning',
                           style: Styles.headLineStyle3,
                         ),
-                        const Gap(5),
+                        Gap(AppLayout.getHeight(5)),
                         Text(
                           'Book Tickets',
                           style: Styles.headLineStyle1,
@@ -38,11 +41,11 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     Container(
-                      height: 50,
-                      width: 50,
+                      height: AppLayout.getHeight(50),
+                      width: AppLayout.getWidth(50),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage('assets/images/img_1.png'),
                         ),
@@ -50,12 +53,15 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                const Gap(25),
+                Gap(AppLayout.getWidth(25)),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                  padding: EdgeInsets.symmetric(
+                      horizontal: AppLayout.getWidth(12),
+                      vertical: AppLayout.getHeight(12)),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFF4F6FD),
-                    borderRadius: BorderRadius.circular(10),
+                    color: Styles.bgColor,
+                    borderRadius:
+                        BorderRadius.circular(AppLayout.getHeight(10)),
                   ),
                   child: Row(
                     children: [
@@ -67,7 +73,7 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const Gap(40),
+                Gap(AppLayout.getWidth(40)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -89,7 +95,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          const Gap(15),
+          Gap(AppLayout.getHeight(15)),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.only(left: 10),
@@ -99,9 +105,9 @@ class HomeScreen extends StatelessWidget {
                   .toList(),
             ),
           ),
-          const Gap(15),
+          Gap(AppLayout.getHeight(15)),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -121,10 +127,10 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-          const Gap(15),
+          Gap(AppLayout.getHeight(15)),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.only(left: 20),
+            padding: EdgeInsets.only(left: AppLayout.getHeight(20)),
             child: Row(
               children: hotelList
                   .map((singleHotel) => HotelScreen(hotel: singleHotel))
