@@ -14,7 +14,8 @@ class AppIconText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-          vertical: AppLayout.getWidth(12), horizontal: AppLayout.getWidth(12)),
+          vertical: AppLayout.getWidth(12),
+          horizontal: AppLayout.getHeight(12)),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(AppLayout.getWidth(10))),
