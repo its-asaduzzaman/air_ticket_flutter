@@ -5,9 +5,10 @@ import '../utils/app_layout.dart';
 import '../utils/app_style.dart';
 
 class AppIconText extends StatelessWidget {
-  const AppIconText({
-    Key? key,
-  }) : super(key: key);
+  final IconData icon;
+  final String text;
+  const AppIconText({Key? key, required this.icon, required this.text})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +20,13 @@ class AppIconText extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppLayout.getWidth(10))),
       child: Row(
         children: [
-          const Icon(
-            Icons.flight_takeoff_rounded,
+          Icon(
+            icon,
             color: Color(0xFFBFC2DF),
           ),
           Gap(AppLayout.getWidth(10)),
           Text(
-            'Departure',
+            text,
             style: Styles.textStyle,
           )
         ],
