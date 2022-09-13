@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../utils/app_style.dart';
 import 'package:gap/gap.dart';
 import '../utils/app_layout.dart';
+import '../widgets/text_icon_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class SearchScreen extends StatelessWidget {
             style: Styles.headLineStyle1
                 .copyWith(fontSize: AppLayout.getWidth(35)),
           ),
-          Gap(AppLayout.getHeight(40)),
+          Gap(AppLayout.getHeight(20)),
           FittedBox(
             child: Container(
               padding: const EdgeInsets.all(3.5),
@@ -59,6 +60,8 @@ class SearchScreen extends StatelessWidget {
               ),
             ),
           ),
+          Gap(AppLayout.getHeight(25)),
+          AppIconText(),
         ],
       ),
     );
