@@ -75,7 +75,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Gap(AppLayout.getWidth(40)),
-                AppDoubleTextWidget(
+                const AppDoubleTextWidget(
                   bigText: 'Upcoming Flight',
                   smallText: 'View all',
                 ),
@@ -95,23 +95,9 @@ class HomeScreen extends StatelessWidget {
           Gap(AppLayout.getHeight(15)),
           Container(
             padding: EdgeInsets.symmetric(horizontal: AppLayout.getWidth(20)),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Hotels',
-                  style: Styles.headLineStyle2,
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    'View all',
-                    style: Styles.textStyle.copyWith(
-                      color: Styles.primaryColor,
-                    ),
-                  ),
-                ),
-              ],
+            child: const AppDoubleTextWidget(
+              bigText: 'Hotels',
+              smallText: 'View all',
             ),
           ),
           Gap(AppLayout.getHeight(15)),
