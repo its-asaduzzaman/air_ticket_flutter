@@ -7,6 +7,7 @@ import 'package:air_ticket_flutter/utils/app_style.dart';
 import 'package:gap/gap.dart';
 
 import '../utils/app_layout.dart';
+import '../widgets/double_text_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -74,23 +75,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Gap(AppLayout.getWidth(40)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      'Upcoming Flight',
-                      style: Styles.headLineStyle2,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'View all',
-                        style: Styles.textStyle.copyWith(
-                          color: Styles.primaryColor,
-                        ),
-                      ),
-                    ),
-                  ],
+                AppDoubleTextWidget(
+                  bigText: 'Upcoming Flight',
+                  smallText: 'View all',
                 ),
               ],
             ),
