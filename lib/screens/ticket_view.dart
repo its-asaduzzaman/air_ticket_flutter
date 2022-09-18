@@ -48,9 +48,11 @@ class TicketView extends StatelessWidget {
                                 .copyWith(color: Colors.black),
                       ),
                       const Spacer(),
-                      const ThickContainer(
-                        isColor: true,
-                      ),
+                      isColor == null
+                          ? ThickContainer()
+                          : ThickContainer(
+                              isColor: true,
+                            ),
                       Expanded(
                         child: Stack(
                           children: [
@@ -95,9 +97,11 @@ class TicketView extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const ThickContainer(
-                        isColor: true,
-                      ),
+                      isColor == null
+                          ? ThickContainer()
+                          : ThickContainer(
+                              isColor: true,
+                            ),
                       const Spacer(),
                       Text(
                         ticket['to']['code'],
