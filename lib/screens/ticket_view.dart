@@ -190,7 +190,7 @@ class TicketView extends StatelessWidget {
                                   decoration: BoxDecoration(
                                     color: isColor == null
                                         ? Colors.white
-                                        : Colors.black,
+                                        : Colors.grey,
                                   ),
                                 ),
                               ),

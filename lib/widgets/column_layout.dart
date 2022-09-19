@@ -8,12 +8,14 @@ class AppColumnLayout extends StatelessWidget {
   final String firstText;
   final String secondText;
   final bool? isLeft;
+  final bool? isImage;
 
   const AppColumnLayout(
       {Key? key,
       required this.firstText,
       required this.secondText,
-      this.isLeft = true})
+      this.isLeft = true,
+      this.isImage})
       : super(key: key);
 
   @override
@@ -22,10 +24,23 @@ class AppColumnLayout extends StatelessWidget {
       crossAxisAlignment:
           isLeft == true ? CrossAxisAlignment.start : CrossAxisAlignment.end,
       children: [
-        Text(
-          firstText,
-          style: Styles.headLineStyle3.copyWith(color: Colors.black),
-        ),
+        isImage == null
+            ? Text(
+                firstText,
+                style: Styles.headLineStyle3.copyWith(color: Colors.black),
+              )
+            : Row(
+                children: [
+                  Image.asset(
+                    "assets/images/visa.png",
+                    scale: 11,
+                  ),
+                  Text(
+                    ' *** 2589',
+                    style: Styles.headLineStyle3.copyWith(color: Colors.black),
+                  )
+                ],
+              ),
         Gap(AppLayout.getHeight(5)),
         Text(
           secondText,
