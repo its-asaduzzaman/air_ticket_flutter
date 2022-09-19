@@ -6,6 +6,8 @@ import 'package:air_ticket_flutter/widgets/ticket_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../widgets/column_layout.dart';
+
 class TicketScreen extends StatelessWidget {
   const TicketScreen({Key? key}) : super(key: key);
 
@@ -36,7 +38,26 @@ class TicketScreen extends StatelessWidget {
                     ticket: ticketList[0],
                     isColor: true,
                   ),
-                )
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  margin: EdgeInsets.only(left: 10, right: 16),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          AppColumnLayout(
+                            firstText: "Samrat",
+                            secondText: "Passenger",
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ),
               ],
             )
           ],
