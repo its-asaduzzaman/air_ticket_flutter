@@ -46,13 +46,39 @@ class TicketScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Gap(AppLayout.getHeight(30)),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           AppColumnLayout(
                             firstText: "Samrat",
                             secondText: "Passenger",
-                          )
+                          ),
+                          Gap(AppLayout.getHeight(30)),
+                          AppColumnLayout(
+                            firstText: "5598 652236",
+                            secondText: "passport",
+                            isLeft: false,
+                          ),
+                        ],
+                      ),
+                      Gap(AppLayout.getHeight(30)),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          AppColumnLayout(
+                            firstText: "0033 555 99657",
+                            secondText: "Number of E-ticket",
+                            isLeft: true,
+                          ),
+                          Gap(AppLayout.getHeight(30)),
+                          AppColumnLayout(
+                            firstText: "B2SH96",
+                            secondText: "Booking code",
+                            isLeft: false,
+                          ),
                         ],
                       )
                     ],
