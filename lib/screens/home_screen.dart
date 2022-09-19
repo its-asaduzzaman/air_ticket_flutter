@@ -60,7 +60,7 @@ class HomeScreen extends StatelessWidget {
                       horizontal: AppLayout.getWidth(12),
                       vertical: AppLayout.getHeight(12)),
                   decoration: BoxDecoration(
-                    color: Styles.bgColor,
+                    color: Colors.white,
                     borderRadius:
                         BorderRadius.circular(AppLayout.getHeight(10)),
                   ),
