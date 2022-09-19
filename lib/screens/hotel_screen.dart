@@ -12,15 +12,15 @@ class HotelScreen extends StatelessWidget {
     final size = AppLayout.getSize(context);
     return Container(
       width: size.width * 0.6,
-      height: AppLayout.getHeight(350),
+      height: AppLayout.getHeight(320),
       padding: EdgeInsets.symmetric(
           horizontal: AppLayout.getHeight(15),
           vertical: AppLayout.getHeight(17)),
       margin: EdgeInsets.only(
           right: AppLayout.getHeight(17), top: AppLayout.getHeight(5)),
       decoration: BoxDecoration(
-        color: Styles.primaryColor,
-        borderRadius: BorderRadius.circular(AppLayout.getHeight(24)),
+        color: Styles.primaryColor.withOpacity(.8),
+        borderRadius: BorderRadius.circular(AppLayout.getHeight(12)),
         boxShadow: [
           BoxShadow(
             color: Colors.grey.shade200,
@@ -32,14 +32,20 @@ class HotelScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: AppLayout.getHeight(180),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(AppLayout.getHeight(12)),
-              color: Styles.primaryColor,
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: AssetImage('assets/images/${hotel['image']}'),
+          SizedBox(
+            height: 10,
+          ),
+          Center(
+            child: Container(
+              height: AppLayout.getHeight(150),
+              width: AppLayout.getWidth(170),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(AppLayout.getHeight(5)),
+                color: Styles.primaryColor,
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/images/${hotel['image']}'),
+                ),
               ),
             ),
           ),

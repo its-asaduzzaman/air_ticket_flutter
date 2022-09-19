@@ -45,7 +45,7 @@ class SearchScreen extends StatelessWidget {
               horizontal: AppLayout.getHeight(15),
             ),
             decoration: BoxDecoration(
-              color: const Color(0xFF1130CE),
+              color: const Color(0xFF212121),
               borderRadius: BorderRadius.circular(AppLayout.getWidth(10)),
             ),
             child: Center(
@@ -90,6 +90,7 @@ class SearchScreen extends StatelessWidget {
                               fit: BoxFit.cover,
                               image: AssetImage('assets/images/sit.jpg'))),
                     ),
+                    Gap(AppLayout.getHeight(25)),
                     Text(
                       'Welcome to the website. If you re here, you re If you re here, you re',
                       style: Styles.headLineStyle2,
@@ -108,7 +109,7 @@ class SearchScreen extends StatelessWidget {
                         height: AppLayout.getHeight(230),
                         width: size.width * 0.44,
                         decoration: BoxDecoration(
-                            color: const Color(0xFF3CB8B8),
+                            color: Styles.primaryColor,
                             borderRadius:
                                 BorderRadius.circular(AppLayout.getHeight(18))),
                         child: Column(
@@ -138,8 +139,8 @@ class SearchScreen extends StatelessWidget {
                           padding: EdgeInsets.all(AppLayout.getHeight(30)),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            border:
-                                Border.all(width: 18, color: Color(0xFF189999)),
+                            border: Border.all(
+                                width: 18, color: Colors.black.withOpacity(.5)),
                             color: Colors.transparent,
                           ),
                         ),
@@ -154,7 +155,7 @@ class SearchScreen extends StatelessWidget {
                         vertical: AppLayout.getHeight(15),
                         horizontal: AppLayout.getWidth(15)),
                     decoration: BoxDecoration(
-                        color: const Color(0xFFEC6545),
+                        color: const Color(0xFFD32F2F),
                         borderRadius:
                             BorderRadius.circular(AppLayout.getHeight(18))),
                     child: Column(

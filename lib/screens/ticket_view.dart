@@ -155,7 +155,7 @@ class TicketView extends StatelessWidget {
             Orange ticket part
              */
             Container(
-              color: isColor == null ? Styles.orangeColor : Colors.white,
+              color: isColor == null ? Styles.redColor : Colors.white,
               child: Row(
                 children: [
                   SizedBox(
@@ -223,7 +223,7 @@ class TicketView extends StatelessWidget {
                   right: AppLayout.getHeight(16),
                   bottom: AppLayout.getHeight(16)),
               decoration: BoxDecoration(
-                color: isColor == null ? Styles.orangeColor : Colors.white,
+                color: isColor == null ? Styles.redColor : Colors.white,
                 borderRadius: BorderRadius.only(
                   bottomLeft: isColor == null
                       ? Radius.circular(AppLayout.getHeight(21))
