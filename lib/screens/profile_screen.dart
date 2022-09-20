@@ -87,30 +87,65 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           Gap(AppLayout.getHeight(30)),
-          Stack(
-            children: [
-              Container(
-                height: AppLayout.getHeight(100),
-                width: size.width * 0.99,
-                decoration: BoxDecoration(
-                    color: Styles.primaryColor,
-                    borderRadius: BorderRadius.circular(20)),
-              ),
-              Positioned(
-                right: -45,
-                top: -40,
-                child: Container(
-                  padding: EdgeInsets.all(AppLayout.getHeight(30)),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(
-                        width: 25, color: Colors.black.withOpacity(.5)),
-                    color: Colors.transparent,
+          Container(
+              height: AppLayout.getHeight(100),
+              width: size.width * 0.99,
+              decoration: BoxDecoration(
+                  color: Styles.primaryColor,
+                  borderRadius: BorderRadius.circular(20)),
+              child: Stack(
+                children: [
+                  Positioned(
+                    right: -45,
+                    top: -40,
+                    child: Container(
+                      padding: EdgeInsets.all(AppLayout.getHeight(30)),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                            width: 25, color: Colors.black.withOpacity(.5)),
+                        color: Colors.transparent,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            ],
-          ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Gap(AppLayout.getHeight(20)),
+                      Container(
+                        height: AppLayout.getHeight(60),
+                        width: AppLayout.getWidth(60),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50)),
+                        child: Icon(
+                          Icons.lightbulb_rounded,
+                          color: Styles.primaryColor,
+                          size: 35,
+                        ),
+                      ),
+                      Gap(AppLayout.getHeight(5)),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'You`ve got a new award',
+                            style: Styles.headLineStyle2
+                                .copyWith(color: Colors.white),
+                          ),
+                          Text(
+                            'You have 50 flights in a year',
+                            style: Styles.headLineStyle3
+                                .copyWith(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              )),
         ],
       ),
     );
